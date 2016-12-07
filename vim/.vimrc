@@ -147,3 +147,4 @@ endif
 
 set autoindent
 set tw=100
+set fo-=t
