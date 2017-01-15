@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>build</key>
+	<real>705</real>
+	<key>preferences</key>
+	<dict>
+		<key>Battery_MenubarMode</key>
+		<string>6,0</string>
+		<key>CPU_MenubarMode</key>
+		<string>6</string>
+		<key>Diagnostics_Enabled</key>
+		<integer>0</integer>
+		<key>Disks_MenubarMode</key>
+		<string>100,0</string>
+		<key>Memory_MenubarMode</key>
+		<string>6</string>
+		<key>Network_MenubarMode</key>
+		<string>3,0,1</string>
+		<key>StatusItems-Order</key>
+		<array>
+			<integer>7</integer>
+			<integer>1</integer>
+			<integer>2</integer>
+			<integer>4</integer>
+			<integer>6</integer>
+		</array>
+		<key>Time_MenubarFormat</key>
+		<array>
+			<string>EEEE</string>
+			<string>' '</string>
+			<string>MMMM</string>
+			<string>' '</string>
+			<string>d</string>
+			<string>', '</string>
+			<string>yyyy</string>
+			<string>' '</string>
+			<string>HH</string>
+			<string>':'</string>
+			<string>mm</string>
+			<string>':'</string>
+			<string>ss</string>
+		</array>
+	</dict>
+	<key>version</key>
+	<real>5.309999942779541</real>
+</dict>
+</plist>
