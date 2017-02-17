@@ -117,6 +117,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'neomake/neomake'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'keith/swift.vim'
+Plug 'fatih/vim-go'
 call plug#end()
 
 autocmd! BufWritePost,BufEnter * Neomake
