@@ -110,7 +110,13 @@ set clipboard=unnamed
 set shiftwidth=4
 set expandtab
 
+set autoindent
+set tw=100
+set fo-=t
+
+au FileType markdown setlocal wrap linebreak nolist textwidth=0 wrapmargin=0
 autocmd FileType c,cpp,java,php,py autocmd BufWritePre <buffer> %s/\s\+$//e
+au FileType yaml setlocal tabstop=2 expandtab shiftwidth=2 softtabstop=2
 
 call plug#begin('~/.vim/plugged')
 Plug 'ctrlpvim/ctrlp.vim'
@@ -145,7 +151,3 @@ if executable('ag')
   let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
   let g:ctrlp_use_caching = 0
 endif
-
-set autoindent
-set tw=100
-set fo-=t
