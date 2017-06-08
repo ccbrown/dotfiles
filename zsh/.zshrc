@@ -21,3 +21,7 @@ antigen apply
 
 autoload -U bashcompinit
 bashcompinit
+
+if [ -f $HOME/.zshrc_completions ]; then
+    source $HOME/.zshrc_completions
+fi
