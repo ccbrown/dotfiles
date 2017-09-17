@@ -129,13 +129,14 @@ call plug#end()
 autocmd! BufWritePost,BufEnter * Neomake
 au BufNewFile,BufRead *.twig,*.jinja set filetype=jinja
 
-let g:neomake_python_pep8_maker = {
+let g:neomake_python_pycodestyle_maker = {
     \ 'args': ['--max-line-length=200'],
     \ 'errorformat': '%f:%l:%c: %m',
     \ 'postprocess': function('neomake#makers#ft#python#Pep8EntryProcess')
     \ }
 
 let g:neomake_cpp_enabled_makers = []
+let g:neomake_go_enabled_makers = ['go', 'govet']
 
 let g:multi_cursor_use_default_mapping=0
 let g:multi_cursor_next_key='<C-n>'
