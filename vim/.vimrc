@@ -124,6 +124,9 @@ Plug 'neomake/neomake'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'keith/swift.vim'
 Plug 'fatih/vim-go'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb'
+Plug 'leafgarland/typescript-vim'
 call plug#end()
 
 autocmd! BufWritePost,BufEnter * Neomake

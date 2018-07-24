@@ -22,3 +22,4 @@ nvim -c ':PlugInstall' -c ':qa'
 
 rm -f $HOME/.zshrc.d/vim.zsh && ln -s $DIR/.zshrc $HOME/.zshrc.d/vim.zsh
 
+nvim -c ':GoInstallBinaries' -c ':qa'
