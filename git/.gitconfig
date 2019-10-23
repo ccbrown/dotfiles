@@ -1,6 +1,6 @@
 [core]
 	autocrlf = false
-	excludesfile = /Users/cbrown/.gitignore
+    excludesfile = ~/.gitignore
 [alias]
 	wsfix = !git diff HEAD >P.diff && git reset --hard HEAD && git apply --index --whitespace=fix P.diff && rm -f P.diff
 	pr = "!f() { git fetch -fu ${2:-origin} refs/pull/$1/head:pr/$1 && git checkout pr/$1; }; f"
@@ -17,5 +17,3 @@
 	default = matching
 [url "git@github.com:"]
     insteadOf = https://github.com/
-[core]
-    excludesfile = ~/.gitignore
