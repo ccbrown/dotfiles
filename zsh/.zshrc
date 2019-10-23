@@ -25,3 +25,5 @@ bashcompinit
 if [ -f $HOME/.zshrc_completions ]; then
     source $HOME/.zshrc_completions
 fi
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
