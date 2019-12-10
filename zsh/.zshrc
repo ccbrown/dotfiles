@@ -1,5 +1,6 @@
 ZSHRC=$HOME/.zshrc
 DOTFILES=$(dirname $(if [ -h $ZSHRC ]; then dirname $(readlink "$ZSHRC"); else $(cd "$(dirname "$ZSHRC")" ; pwd -P); fi))
+DISABLE_MAGIC_FUNCTIONS=true
 
 source "$DOTFILES/zsh/antigen/antigen.zsh"
 
