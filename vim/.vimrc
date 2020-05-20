@@ -127,10 +127,15 @@ Plug 'fatih/vim-go'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
 Plug 'leafgarland/typescript-vim'
+Plug 'rust-lang/rust.vim'
 call plug#end()
+
+let g:rustfmt_autosave = 1
 
 autocmd! BufWritePost,BufEnter * Neomake
 au BufNewFile,BufRead *.twig,*.jinja set filetype=jinja
+
+let g:neomake_python_python_exe = 'python3'
 
 let g:neomake_python_pycodestyle_maker = {
     \ 'args': ['--max-line-length=200'],
