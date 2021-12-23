@@ -121,19 +121,22 @@ au FileType yaml setlocal tabstop=2 expandtab shiftwidth=2 softtabstop=2
 call plug#begin('~/.vim/plugged')
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'neomake/neomake'
-Plug 'terryma/vim-multiple-cursors'
+Plug 'mg979/vim-visual-multi'
 Plug 'keith/swift.vim'
 Plug 'fatih/vim-go'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
 Plug 'leafgarland/typescript-vim'
 Plug 'rust-lang/rust.vim'
+Plug 'vhda/verilog_systemverilog.vim'
 call plug#end()
 
 let g:rustfmt_autosave = 1
 
 autocmd! BufWritePost,BufEnter * Neomake
 au BufNewFile,BufRead *.twig,*.jinja set filetype=jinja
+
+autocmd FileType tf setlocal shiftwidth=2 tabstop=2
 
 let g:neomake_python_python_exe = 'python3'
 
@@ -146,17 +149,11 @@ let g:neomake_python_pycodestyle_maker = {
 let g:neomake_cpp_enabled_makers = []
 let g:neomake_go_enabled_makers = ['go', 'govet']
 
-let g:multi_cursor_use_default_mapping=0
-let g:multi_cursor_next_key='<C-n>'
-let g:multi_cursor_prev_key='<C-p>'
-let g:multi_cursor_skip_key='<C-x>'
-let g:multi_cursor_quit_key='<C-c>'
-nnoremap <C-c> :call multiple_cursors#quit()<CR>
-let g:multi_cursor_exit_from_visual_mode=0
-let g:multi_cursor_exit_from_insert_mode=0
-
 if executable('ag')
   set grepprg=ag\ --nogroup\ --nocolor
   let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
   let g:ctrlp_use_caching = 0
 endif
+
+let g:VM_maps = {}
+let g:VM_maps['Exit'] = '<C-c>'
