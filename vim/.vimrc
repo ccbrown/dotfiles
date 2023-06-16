@@ -129,6 +129,7 @@ Plug 'tpope/vim-rhubarb'
 Plug 'leafgarland/typescript-vim'
 Plug 'rust-lang/rust.vim'
 Plug 'vhda/verilog_systemverilog.vim'
+Plug 'github/copilot.vim'
 call plug#end()
 
 let g:rustfmt_autosave = 1
@@ -157,3 +158,10 @@ endif
 
 let g:VM_maps = {}
 let g:VM_maps['Exit'] = '<C-c>'
+
+imap ‘ <Plug>(copilot-next)
+imap “ <Plug>(copilot-previous)
+
+let g:copilot_filetypes = {
+   \ 'markdown': v:true,
+   \ }
