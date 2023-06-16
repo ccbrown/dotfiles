@@ -129,7 +129,7 @@ Plug 'tpope/vim-rhubarb'
 Plug 'leafgarland/typescript-vim'
 Plug 'rust-lang/rust.vim'
 Plug 'vhda/verilog_systemverilog.vim'
-Plug 'github/copilot.vim'
+Plug 'github/copilot.vim', { 'branch': 'release' }
 call plug#end()
 
 let g:rustfmt_autosave = 1
