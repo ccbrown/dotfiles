@@ -10,6 +10,8 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 SAVEHIST=1000000
 unsetopt share_history
 
+PROMPT='%F{white}%1~%f %# '
+
 export REPORTTIME=1
 
 if [ -d $HOME/.zshrc.d ]; then
