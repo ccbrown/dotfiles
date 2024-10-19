@@ -11,6 +11,7 @@ SAVEHIST=1000000
 unsetopt share_history
 
 PROMPT='%F{white}%1~%f %# '
+DISABLE_AUTO_TITLE=true
 
 export REPORTTIME=1
 

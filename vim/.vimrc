@@ -132,6 +132,8 @@ Plug 'vhda/verilog_systemverilog.vim'
 Plug 'github/copilot.vim', { 'branch': 'release' }
 call plug#end()
 
+colorscheme vim
+
 let g:rustfmt_autosave = 1
 
 autocmd! BufWritePost,BufEnter * Neomake
