@@ -130,11 +130,15 @@ Plug 'leafgarland/typescript-vim'
 Plug 'rust-lang/rust.vim'
 Plug 'vhda/verilog_systemverilog.vim'
 Plug 'github/copilot.vim', { 'branch': 'release' }
+Plug 'prettier/vim-prettier'
 call plug#end()
 
 colorscheme vim
 
 let g:rustfmt_autosave = 1
+
+let g:prettier#autoformat_config_present = 1
+let g:prettier#autoformat_require_pragma = 0
 
 autocmd! BufWritePost,BufEnter * Neomake
 au BufNewFile,BufRead *.twig,*.jinja set filetype=jinja
@@ -151,6 +155,9 @@ let g:neomake_python_pycodestyle_maker = {
 
 let g:neomake_cpp_enabled_makers = []
 let g:neomake_go_enabled_makers = ['go', 'govet']
+
+let g:copilot_settings = #{ selectedCompletionModel: 'gpt-4o-copilot' }
+let g:copilot_integration_id = 'vscode-chat'
 
 if executable('ag')
   set grepprg=ag\ --nogroup\ --nocolor
