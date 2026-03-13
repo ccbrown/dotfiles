@@ -1,6 +1,6 @@
 [core]
 	autocrlf = false
-    excludesfile = ~/.gitignore
+	excludesfile = ~/.gitignore
 [alias]
 	wsfix = !git diff HEAD >P.diff && git reset --hard HEAD && git apply --index --whitespace=fix P.diff && rm -f P.diff
 	pr = "!f() { git fetch -fu ${2:-origin} refs/pull/$1/head:pr/$1 && git checkout pr/$1; }; f"
@@ -16,4 +16,12 @@
 [push]
 	default = matching
 [url "git@github.com:"]
-    insteadOf = https://github.com/
+	insteadOf = https://github.com/
+[user]
+	email = 1731074+ccbrown@users.noreply.github.com
+	name = Chris Brown
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
