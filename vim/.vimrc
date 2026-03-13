@@ -129,11 +129,17 @@ Plug 'tpope/vim-rhubarb'
 Plug 'leafgarland/typescript-vim'
 Plug 'rust-lang/rust.vim'
 Plug 'vhda/verilog_systemverilog.vim'
-Plug 'github/copilot.vim', { 'branch': 'release' }
+if !exists('g:vscode')
+    Plug 'github/copilot.vim', { 'branch': 'release' }
+endif
 Plug 'prettier/vim-prettier'
+Plug 'hashivim/vim-terraform'
 call plug#end()
 
 colorscheme vim
+
+let g:terraform_fmt_on_save=1
+let g:terraform_align=1
 
 let g:rustfmt_autosave = 1
 
@@ -159,6 +165,11 @@ let g:neomake_go_enabled_makers = ['go', 'govet']
 let g:copilot_settings = #{ selectedCompletionModel: 'gpt-4o-copilot' }
 let g:copilot_integration_id = 'vscode-chat'
 
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\.git$\|\.yardoc\|node_modules\|log\|tmp$',
+  \ 'file': '\.so$\|\.dat$|\.DS_Store$'
+  \ }
+
 if executable('ag')
   set grepprg=ag\ --nogroup\ --nocolor
   let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
@@ -167,6 +178,8 @@ endif
 
 let g:VM_maps = {}
 let g:VM_maps['Exit'] = '<C-c>'
+let g:VM_maps['Add Cursor Down'] = '<C-j>'
+let g:VM_maps['Add Cursor Up'] = '<C-k>'
 
 imap ‘ <Plug>(copilot-next)
 imap “ <Plug>(copilot-previous)

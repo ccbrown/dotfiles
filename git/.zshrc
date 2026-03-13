@@ -1,1 +1,1 @@
-antigen bundle git-prompt
+#antigen bundle git-prompt

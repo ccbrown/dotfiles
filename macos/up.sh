@@ -455,6 +455,11 @@ defaults write com.google.Chrome PMPrintingExpandedStateForPrint2 -bool true
 defaults write com.google.Chrome.canary PMPrintingExpandedStateForPrint2 -bool true
 
 ###############################################################################
+# Visual Studio Code                                                          #
+###############################################################################
+defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
+
+###############################################################################
 # Kill affected applications                                                  #
 ###############################################################################
 
