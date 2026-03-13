@@ -29,6 +29,12 @@ for domain in ~/Library/Preferences/ByHost/com.apple.systemuiserver.*; do
 		"/System/Library/CoreServices/Menu Extras/Volume.menu" \
 		"/System/Library/CoreServices/Menu Extras/User.menu"
 done
+defaults -currentHost write com.apple.controlcenter FocusModes -int 24
+defaults -currentHost write com.apple.controlcenter Battery -int 24
+defaults -currentHost write com.apple.controlcenter WiFi -int 24
+
+# Show seconds
+defaults write com.apple.menuextra.clock ShowSeconds -bool true
 
 # Expand save panel by default
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
